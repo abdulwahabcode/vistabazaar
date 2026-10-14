@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaBazaar — Lahore Property Marketplace by Crown Vista Group</title>
+    <meta name="description" content="VistaBazaar by Crown Vista Group — Lahore's simple, clean property marketplace for buying, selling, and renting homes, apartments, commercial properties, and plots." />
+    <meta property="og:title" content="VistaBazaar — Lahore Property Marketplace by Crown Vista Group" />
+    <meta property="og:description" content="VistaBazaar by Crown Vista Group — Lahore's simple, clean property marketplace for buying, selling, and renting homes, apartments, commercial properties, and plots." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          var theme = 'system';
+          var sessionRaw = localStorage.getItem('vb-session');
+          if (sessionRaw) {
+            var session = JSON.parse(sessionRaw);
+            var THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+            if (session && session.userId && session.timestamp && (Date.now() - session.timestamp < THIRTY_DAYS)) {
+              var userThemeRaw = localStorage.getItem('vb-theme-' + session.userId);
+              if (userThemeRaw) {
+                try {
+                  theme = JSON.parse(userThemeRaw);
+                } catch (e) {
+                  theme = userThemeRaw;
+                }
+              }
+            }
+          }
+          var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (err) {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+          }
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/vistabazaar/assets/index-CHbsYrbG.js"></script>
+    <link rel="stylesheet" crossorigin href="/vistabazaar/assets/index-DUv57Den.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
