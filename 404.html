@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Rent Houses</title>
+<script>
+(function () {
+  // GitHub Pages serves this file for unknown paths (no server-side SPA
+  // fallback). Bounce the deep link back into the app, preserving the
+  // intended route in ?_route= so the app can restore it on boot.
+  var base = '/vistabazaar';
+  var path = window.location.pathname || '/';
+  var route = path.indexOf(base) === 0 ? path.slice(base.length) : path;
+  if (!route) route = '/';
+  var extra = window.location.search || '';
+  window.location.replace(base + '/?_route=' + encodeURIComponent(route + extra));
+})();
+</script>
+</head>
+<body></body>
+</html>
