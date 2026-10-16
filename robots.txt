@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdulwahabcode.github.io/vistabazaar/sitemap.xml
